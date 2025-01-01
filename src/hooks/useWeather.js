@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect, useCallback } from 'react';
 
 function convertToFlag(countryCode) {
 	const codePoints = countryCode
@@ -13,7 +13,7 @@ function useWeather(location) {
 	const [displayLocation, setDisplayLocation] = useState('');
 	const [weather, setWeather] = useState({}, 'location');
 
-	async function fetchWeather() {
+	const fetchWeather = useCallback(async () => {
 		if (location.length < 2) return setWeather({});
 
 		try {
@@ -43,9 +43,14 @@ function useWeather(location) {
 		} finally {
 			setIsLoading(false);
 		}
-	}
+	}, [location]);
 
-	return { fetchWeather, isLoading, displayLocation, weather };
+	useEffect(() => {
+		if (location) {
+			fetchWeather();
+		}
+	}, [fetchWeather, location]);
+	return { isLoading, displayLocation, weather };
 }
 
 export { useWeather };
