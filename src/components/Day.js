@@ -28,7 +28,7 @@ export default function Day({ date, min, max, code, isToday }) {
 			<span>{getWeatherIcon(code)}</span>
 			<p>{isToday ? 'Today' : formatDay(date)}</p>
 			<p>
-				{Math.round(min)}&deg; <strong>{Math.ceil(max)}&deg;</strong>
+				{Math.round(min)}&deg; &mdash; <strong>{Math.ceil(max)}&deg;</strong>
 			</p>
 		</li>
 	);
