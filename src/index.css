@@ -1,0 +1,110 @@
+@import url("https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "Cinzel Decorative", cursive;
+  font-size: 2rem;
+  height: 100vh;
+  color: #fff;
+  /* color: #222; */
+  /* background-color: #eabfb9; */
+  background-image: url('../public/weather.jpeg');
+  background-position: center;
+  background-size: cover;
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+ 
+}
+
+.app {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 112rem;
+  gap: 4rem;
+  /* padding: 6rem 0; */
+  /* border: 2px solid #222; */
+  /* outline: 2px solid #222; */
+  outline-offset: 1.2rem;
+}
+
+h1 {
+  font-weight: 600;
+  font-size: 6rem;
+  letter-spacing: 2px;
+  word-spacing: 5px;
+  background: linear-gradient(to right , #03316e , #fff);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+h2 {
+  text-align: center;
+  margin-bottom: 2.4rem;
+}
+
+input {
+  font-family: inherit;
+  color: inherit;
+  font-size: 2rem;
+  /* background-color: #f0d2ce; */
+  /* background-color: #002b68; */
+  background-color: #0953b3;
+  padding: 1.6rem 3.2rem;
+  border: none;
+  border-radius: 7px;
+  width: 32rem;
+}
+
+
+input:focus {
+  outline: 2px solid #004194;
+}
+
+.small-title{
+  color: #03316e;
+  font-weight: bold;
+}
+.weather {
+  list-style: none;
+  display: flex;
+  gap: 2.4rem;
+}
+
+.day {
+  /* background-color: #f0d2ce; */
+  /* background-color: #004197; */
+  background-color: #053f56;
+  padding: 1.6rem 0 2rem;
+  width: 12.8rem;
+  border-radius: 7px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.2rem;
+  cursor: pointer;
+}
+
+.day span {
+  font-size: 5.2rem;
+}
+
+.loader {
+  color: #03316e;
+  font-size: 2.4rem;
+  font-weight: 700;
+}
+
+
